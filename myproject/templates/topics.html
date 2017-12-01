@@ -12,21 +12,22 @@
 {% endblock %}
 
 {% block content %}
-<div class="mb-4">
+  <div class="mb-4">
     <a href="{% url 'new_topic' board.pk %}" class="btn btn-primary">New topic</a>
-</div>
-<table class="table table-striped mb-4">
-  <thead class="thead-inverse">
-    <tr>
-      <th>Topic</th>
-      <th>Starter</th>
-      <th>Replies</th>
-      <th>Views</th>
-      <th>Last Update</th>
-    </tr>
-  </thead>
-  <tbody>
-    {% for topic in topics %}
+  </div>
+
+  <table class="table table-striped mb-4">
+    <thead class="thead-inverse">
+      <tr>
+        <th>Topic</th>
+        <th>Starter</th>
+        <th>Replies</th>
+        <th>Views</th>
+        <th>Last Update</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for topic in topics %}
         {% url 'topic_posts' board.pk topic.pk as topic_url %}
         <tr>
           <td>
