@@ -11,6 +11,7 @@ from ..forms import SignUpForm
 
 
 ######################  SIGNUP TESTS   ####################################
+
 class SignUpTests(object):
     def setUp(self):
         url = reverse('signup')
@@ -47,6 +48,7 @@ class SignUpTests(object):
 
 
 ######################  SUCCESSFULL SIGNUP TESTS   ####################################
+
 class SuccessfulSignUpTests(TestCase):
     def setUp(self):
         url = reverse('signup')
